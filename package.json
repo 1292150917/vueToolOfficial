@@ -10,9 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-tool": "^1.0.3"
+    "vue-tool": "^1.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -27,8 +27,8 @@ export default {
       navMessage: [
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Cell", router: "Cell", value: "单元格" },
-        { name: "mlAlert", router: "mlAlert", value: "弹框" },
-        { name: "Swipe", router: "Swipe", value: "轮播" },
+        { name: "Button", router: "Button1", value: "按钮" },
+        { name: "Button", router: "Button", value: "按钮" },
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Button", router: "Button", value: "按钮" },
