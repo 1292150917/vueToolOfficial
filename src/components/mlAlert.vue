@@ -11,20 +11,20 @@
             <h4>你也可以写成</h4>
             <pre>
               <code class="javascript">
-   mlAlert('提示1','内容1').then(res=>{
-      console.log(res)
-   })
+     mlAlert('提示1','内容1').then(res=>{
+        console.log(res)
+     })
               </code>
             </pre>
             <h4>也可以写成</h4>
             <pre>
               <code class="javascript">
-    mlAlert({
+     mlAlert({
         title:"xxxx",
         content:xxx
      }).then(res=>{
-
-    })
+       console.log(res)
+     })
               </code>
             </pre>
             <h3 class="name">API</h3>
@@ -108,7 +108,9 @@ export default {
   },
   methods: {},
   mounted: function() {
-    hljs.initHighlightingOnLoad();
+    $("pre code").each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
   }
 };
 </script>

@@ -51,7 +51,6 @@ export default {
     }
   },
   created: function() {
-    hljs.initHighlightingOnLoad();
   }
 };
 </script>

@@ -77,6 +77,20 @@
             </table>
     </div>
 </template>
+<script>
+export default {
+  name: "index",
+  data() {
+    return {};
+  },
+  methods: {},
+  mounted: function() {
+    $("pre code").each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  }
+};
+</script>
 <style>
 thead {
   background: #f1f4f8;

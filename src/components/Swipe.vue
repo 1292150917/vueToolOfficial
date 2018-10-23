@@ -10,6 +10,7 @@
             <h3>代码演示</h3>
             <h4>显示默认输入</h4>
             <pre>
+                 <code class="html">
      &ltml-cell title="标题" icon="icon-arrowright" seat="left" label="描述信息" value="这是内容"> &lt/ml-cell&gt
                     </code>
             </pre>
@@ -83,7 +84,9 @@ export default {
   },
   methods: {},
   mounted: function() {
-    hljs.initHighlightingOnLoad();
+    $("pre code").each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
   }
 };
 </script>
@@ -98,8 +101,8 @@ th {
 td {
   font-size: 13px;
 }
-.mar30{
-    margin-top: 30px;
+.mar30 {
+  margin-top: 30px;
 }
 .mar20 {
   margin-top: 20px;
