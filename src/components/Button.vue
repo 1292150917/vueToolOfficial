@@ -18,7 +18,7 @@
             </p>
             <pre>
                     <code class="html">
-    &ltmt-button size="large" icon="back" type="primary">按钮&lt/mt-button&gt
+    &ltml-button size="large" icon="back" type="primary">按钮&lt/ml-button&gt
                     </code>
             </pre>
             <h3 class="name">API</h3>

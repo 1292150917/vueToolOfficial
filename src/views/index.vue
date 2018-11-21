@@ -15,6 +15,9 @@
         </div>
         <div class="right">
             <img src="https://mint-ui.github.io/docs/static/img/phone.5909f66.png" alt="">
+            <div class="right-main" >
+              <iframe :src="iframeSrc" frameborder="0"></iframe>
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +27,8 @@ export default {
   name: "index",
   data() {
     return {
+      compon: "",
+      iframeSrc:"index2.html#/",
       navMessage: [
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Cell", router: "Cell", value: "单元格" },
@@ -48,15 +53,28 @@ export default {
   methods: {
     routerClick: function(rou) {
       this.$router.push({ name: rou });
+      this.compon = rou;
+      this.iframeSrc = `index2.html#/${rou}`
     }
   },
-  created: function() {
-  }
+  components: {},
+  created: function() {}
 };
 </script>
 <style scoped>
 /* 内容是main */
-
+.right-main {
+  height: 79%;
+  width: 89%;
+  background: white;
+  position: absolute;
+  top: 11%;
+  left: 5.5%;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
 h2,
 h3 {
   font-weight: 500;
