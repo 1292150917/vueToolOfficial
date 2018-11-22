@@ -6,7 +6,6 @@ import router from './router'
 import Vuetool from 'vue-tool'
 Vue.use(Vuetool)
 Vue.config.productionTip = false
-console.log(1)
 new Vue({
   el: '#app',
   router,

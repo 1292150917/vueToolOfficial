@@ -64,6 +64,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: config.build.index,
       template: 'index.html',
       inject: true,
+      excludeChunks: ['app2'], //需要引入的Chunk，不配置就会引入所有页面的资源
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -78,6 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: config.build.index2,
       template: 'index2.html',
       inject: true,
+      excludeChunks: ['app'], //需要引入的Chunk，不配置就会引入所有页面的资源
       minify: {
         removeComments: true,
         collapseWhitespace: true,
