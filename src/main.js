@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vuetool from 'vue-tool'
+import Vuetool from './vue-tool/src/index'
 Vue.use(Vuetool)
 Vue.config.productionTip = false
 new Vue({

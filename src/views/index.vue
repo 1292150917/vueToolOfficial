@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       compon: "",
-      iframeSrc:"index2.html#/",
+      iframeSrc:"index2.html#/Button",
       navMessage: [
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Cell", router: "Cell", value: "单元格" },

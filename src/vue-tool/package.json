@@ -1,0 +1,52 @@
+{
+  "_from": "vue-tool@^1.0.3",
+  "_id": "vue-tool@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-w1AiN/0dEbOJRVNoTcL+J1jNHv4=",
+  "_location": "/vue-tool",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "vue-tool@^1.0.3",
+    "name": "vue-tool",
+    "escapedName": "vue-tool",
+    "rawSpec": "^1.0.3",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/vue-tool/download/vue-tool-1.0.6.tgz",
+  "_shasum": "c3502237fd1d11b3894553684dc2fe2758cd1efe",
+  "_spec": "vue-tool@^1.0.3",
+  "_where": "C:\\Users\\Admin\\Desktop\\个人\\vueToolOfficial",
+  "author": {
+    "name": "zhangzifang",
+    "email": "1292150917@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/DaiHuaXieHuaKai/GaoDeLocation/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "",
+  "files": [
+    "src",
+    "packages"
+  ],
+  "homepage": "https://github.com/DaiHuaXieHuaKai/GaoDeLocation#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "name": "vue-tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaiHuaXieHuaKai/GaoDeLocation.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.6"
+}

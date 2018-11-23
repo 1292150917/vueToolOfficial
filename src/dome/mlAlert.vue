@@ -1,11 +1,11 @@
 <template>
     <div>
-        <button @click="go()">带取消按钮点击</button>
-        <button @click="go1()">自定义内容</button>
+        <ml-button @click="go()">带取消按钮点击</ml-button>
+        <ml-button :plain="true" @click="go1()">自定义内容</ml-button>
     </div>
 </template>
 <script>
-import { mlAlert } from "vue-tool";
+import mlAlert from "../vue-tool/packages/ml-alert";
 export default {
   name: "Button",
   data() {
@@ -26,6 +26,7 @@ export default {
       });
     }
   },
+  components: {},
   mounted: function() {}
 };
 </script>
