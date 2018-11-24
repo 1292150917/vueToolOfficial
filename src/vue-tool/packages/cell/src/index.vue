@@ -56,7 +56,7 @@
         }
     };
 </script>
-<style>
+<style scoped>
     .ml-cell {
         padding-left: 3%;
         padding-right: 3%;

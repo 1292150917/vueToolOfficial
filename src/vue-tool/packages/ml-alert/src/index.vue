@@ -124,6 +124,7 @@ export default {
   flex: 1;
   background: none;
   border: 0;
+  line-height: 35px;
   height: 35px;
 }
 </style>

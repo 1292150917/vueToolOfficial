@@ -3,6 +3,8 @@
 > A Vue.js project
 
 **待完成版本-持续更新中！**
+**暂时的演示地址为：https://1292150917.github.io/vueToolOfficial/dist/index.html#/Button！**
+[超快传送！点击查看演示效果](https://1292150917.github.io/vueToolOfficial/dist/index.html#/Button)
 
 ## Build Setup
 

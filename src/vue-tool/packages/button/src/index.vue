@@ -39,6 +39,7 @@ button {
   font-size: 15px;
   color: #333;
   border: 0;
+  line-height: 50px;
 }
 .ghost {
   background: none;

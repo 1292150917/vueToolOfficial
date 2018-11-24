@@ -40,7 +40,7 @@
         }
     };
 </script>
-<style>
+<style scoped>
     .ml-toast {
         padding: 7px 8px 8px 8px;
         color: white;
