@@ -5,6 +5,8 @@ import swipeItem from '../packages/swipe/src/swipeItem'
 // 请提示  不需要注册组建
 import mlAlert from '../packages/ml-alert'
 import mlToast from '../packages/toast'
+import InfiniteScroll from '../packages/InfiniteScroll'
+import mlLazy from '../packages/mlLazy'
 import './assets/iconfont.css'
 const install = function (Vue, cog = {}) {
   Vue.component(button.name, button)
@@ -18,7 +20,9 @@ export {
   cell,
   mlAlert,
   mlToast,
-  swipe
+  swipe,
+  mlLazy,
+  InfiniteScroll
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)

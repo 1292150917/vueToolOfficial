@@ -1,24 +1,21 @@
 <template>
     <div>
-            <h2>Button 按钮</h2>
+            <h2>Cell 轮播</h2>
             <h3 class="mar30">使用指南</h3>
             <pre>
                 <code class="javascript">
-    import { Button } from 'vue-tool';
+    import { InfiniteScroll } from 'vue-tool';
                 </code>
             </pre>
             <h3>代码演示</h3>
-            <h4>按钮类型</h4>
-            <p>支持
-                <span>default</span>、
-                <span>primary</span>、
-                <span>warning</span>、
-                <span>danger</span> 四种类型，默认为
-                <span>default</span>
-            </p>
+            <h4>显示默认输入</h4>
             <pre>
-                    <code class="html">
-    &ltml-button size="large" icon="back" type="primary">按钮&lt/ml-button&gt
+                 <code class="html">
+    &ltul v-infinite-scroll="loadMore" infinite-scroll-disabled="10"&gt
+         &ltli&gt1&lt/li&gt
+         &ltli&gt1&lt/li&gt
+         &ltli&gt1&lt/li&gt
+    &lt/ul&gt
                     </code>
             </pre>
             <h3 class="name">API</h3>
@@ -33,28 +30,22 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>type</td>
-                        <td>按钮类型，可选值为 primary warning danger</td>
-                        <td>String</td>
-                        <td>primary</td>
+                        <td>infinite-scroll-disabled</td>
+                        <td>滚动的距离到浏览器底部的距离 和[infinite-scroll]同时使用则会是距离底部距离额外加上多少</td>
+                        <td>Number</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <td>disabled</td>
-                        <td>禁用按钮</td>
+                        <td>only-once-teue</td>
+                        <td>需要使用infinite-scroll-disabled以后禁止1px执行一次 如果需要可以更改为false</td>
                         <td>boolean</td>
-                        <td>false</td>
+                        <td>true</td>
                     </tr>
                     <tr>
-                        <td>plain</td>
-                        <td>幽灵按钮</td>
+                        <td>self-adaption</td>
+                        <td>自适应高度，到达使用元素元素最底部触发 默认是针对[infinite-scroll]绑定的元素</td>
                         <td>boolean</td>
                         <td>false</td>
-                    </tr>
-                      <tr>
-                        <td>icon</td>
-                        <td>图标位置</td>
-                        <td>String</td>
-                        <td>back</td>
                     </tr>
                 </tbody>
             </table>
@@ -69,8 +60,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>click</td>
-                        <td>点击按钮触发的事件</td>
+                        <td>infinite-scroll</td>
+                        <td>到底底部的返回值 callback</td>
                         <td>-</td>
                     </tr>
                 </tbody>
@@ -102,6 +93,9 @@ th {
 td {
   font-size: 13px;
 }
+.mar30 {
+  margin-top: 30px;
+}
 .mar20 {
   margin-top: 20px;
 }
@@ -111,9 +105,6 @@ table {
 }
 h2 {
   margin-top: 40px;
-}
-.mar30 {
-  margin-top: 30px;
 }
 h4 {
   margin-top: 10px;

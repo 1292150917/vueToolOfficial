@@ -22,7 +22,7 @@
     })
 */
     export default {
-        name: "ml-alert",
+        name: "ml-toast",
         data() {
             return {
 

@@ -4,7 +4,7 @@
             <h3 class="mar30">使用指南</h3>
             <pre>
                 <code class="javascript">
-    import { swipe } from 'vant';
+    import { swipe } from 'vue-tool';
                 </code>
             </pre>
             <h3>代码演示</h3>

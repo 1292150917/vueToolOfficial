@@ -21,6 +21,18 @@ var router = new Router({
       path: '/Swipe',
       name: 'Swipe',
       component: r => require.ensure([], () => r(require('@/dome/Swipe')), 'Swipe')
+    },{
+      path: '/Toast',
+      name: 'Toast',
+      component: r => require.ensure([], () => r(require('@/dome/Toast')), 'Toast')
+    },{
+      path: '/List',
+      name: 'List',
+      component: r => require.ensure([], () => r(require('@/dome/List')), 'List')
+    },{
+      path: '/mlLazy',
+      name: 'mlLazy',
+      component: r => require.ensure([], () => r(require('@/dome/mlLazy')), 'mlLazy')
     }
   ]
 })
