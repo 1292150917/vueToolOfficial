@@ -29,7 +29,6 @@
         data() {
             return {
                 swipeNum: null,
-                startPagex: 0,
                 left: 0,
                 sise: 1,
                 durations: 0,

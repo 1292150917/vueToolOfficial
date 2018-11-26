@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ml-swipe :touchable="true">
+        <ml-swipe class="swipe" :touchable="true">
             <ml-swipe-item>
                 <div class="s">
                     1
@@ -38,6 +38,9 @@ export default {
 };
 </script>
 <style>
+.swipe{
+    cursor:pointer;
+}
 .s {
   height: 300px;
   color: white;
