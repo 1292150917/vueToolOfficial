@@ -8,6 +8,7 @@ config.forEach(res => {
     path: res.path,
     name: res.name,
     component: res.component,
+    meta:res.meta
   })
 })
 var router = new Router({

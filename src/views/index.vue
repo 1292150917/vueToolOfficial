@@ -1,25 +1,27 @@
 <template>
-    <div class="index">
-        <div class="nav"></div>
-        <div class="left">
-            <ul>
-                <p class="zhinan">开发指南</p>
-                <p>基本组建</p>
-                <li @click="routerClick(item.router)" v-for="item in navMessage">{{item.name}}
-                    <span>{{item.value}}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="main">
-            <router-view></router-view>  
-        </div>
-        <div class="right">
-            <img src="https://mint-ui.github.io/docs/static/img/phone.5909f66.png" alt="">
-            <div class="right-main" >
-              <iframe :src="iframeSrc" frameborder="0"></iframe>
-            </div>
-        </div>
+  <div class="index">
+    <div class="nav"></div>
+    <div class="left">
+      <ul>
+        <p class="zhinan">开发指南</p>
+        <p class="list" @click="$router.push({path:'brief'})">介绍</p>
+        <p class="title-left">组建</p>
+        <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in navMessage">
+          {{item.name}}
+          <span>{{item.value}}</span>
+        </li>
+      </ul>
     </div>
+    <div class="main">
+      <router-view></router-view>
+    </div>
+    <div class="right">
+      <img src="https://mint-ui.github.io/docs/static/img/phone.5909f66.png" alt>
+      <div class="right-main">
+        <iframe :src="iframeSrc" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,7 @@ export default {
   data() {
     return {
       compon: "",
-      iframeSrc:"index2.html#/Button",
+      iframeSrc: "index2.html#/Button",
       navMessage: [
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Cell", router: "Cell", value: "单元格" },
@@ -54,7 +56,7 @@ export default {
     routerClick: function(rou) {
       this.$router.push({ name: rou });
       this.compon = rou;
-      this.iframeSrc = `index2.html#/${rou}`
+      this.iframeSrc = `index2.html#/${rou}`;
     }
   },
   components: {},
@@ -62,6 +64,16 @@ export default {
 };
 </script>
 <style scoped>
+.title-left {
+  font-size: 14px;
+  font-weight: 800 !important;
+}
+.list {
+  font-size: 14px;
+  margin-top: 25px;
+  margin-bottom: 17px;
+  font-weight: 500 !important;
+}
 /* 内容是main */
 .right-main {
   height: 79%;
@@ -101,8 +113,8 @@ h3 {
 }
 
 .left {
-  overflow: scroll;
-  width: 180px;
+  overflow-y: auto;
+  width: 230px;
   position: fixed;
   top: 60px;
 }
@@ -141,11 +153,13 @@ ul > li {
 
 ul > li > span {
   color: #999;
+  font-size: 12px;
 }
 
 ul {
   border-right: 1px solid #eee;
   min-height: 100%;
+  text-indent: 9px;
 }
 
 ul > li:hover {

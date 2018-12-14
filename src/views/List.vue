@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <p>上拉☞底部自动加载</p>
+  <div>
+    <p>上拉☞底部自动加载</p>
     <ul v-infinite-scroll="loadMore" infinite-scroll-disabled="10">
-        <li v-for="item in indexs">{{item}}</li>
+      <li v-for="item in indexs">{{item}}</li>
     </ul>
-    </div>
+  </div>
 </template>
 <script>
 import InfiniteScroll from "../vue-tool/packages/InfiniteScroll";
@@ -36,11 +36,11 @@ li {
   line-height: 30px;
   border-top: 1px solid #eee;
 }
-p{
-    text-align: center;
-    font-size: 15px;
-    color: #999;
-    margin-top: 15px;
-    margin-bottom: 15px;
+p {
+  text-align: center;
+  font-size: 15px;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 </style>

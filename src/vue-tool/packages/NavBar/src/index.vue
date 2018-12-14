@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div class="nav-bar-left">
-      <i v-if="leftArrow" class="fa fa-angle-left fa-lg" aria-hidden="true"></i>
+      <i v-if="leftArrow"  @click="clickLeft" class="fa fa-angle-left fa-lg" aria-hidden="true"></i>
       <div class="nav-slot-left" @click="clickLeft">
         <slot name="left">
          <div>{{leftText}}</div>
@@ -88,6 +88,7 @@
   }
   .nav-bar-left{
     position: absolute;
+    cursor:pointer;
     left: 15px;
     top: 0;
     color: #1989fa;
@@ -95,7 +96,7 @@
   .nav-bar-title{
     width: 100%;
     text-align: center;  
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
   }
   .nav-bar-right{
@@ -103,6 +104,7 @@
     top: 0;
     color: #1989fa;
     right: 15px;
+    cursor:pointer;
     font-size: 13px;
   }
 </style>
