@@ -4,7 +4,7 @@
         <div class="left">
             <ul>
                 <p class="zhinan">开发指南</p>
-                <p>组建</p>
+                <p>基本组建</p>
                 <li @click="routerClick(item.router)" v-for="item in navMessage">{{item.name}}
                     <span>{{item.value}}</span>
                 </li>
@@ -36,11 +36,11 @@ export default {
         { name: "Swipe", router: "Swipe", value: "轮播" },
         { name: "Toast", router: "Toast", value: "轻提示" },
         { name: "List", router: "List", value: "瀑布流滚动" },
+        { name: "NavBar", router: "NavBar", value: "导航栏" },
+        { name: "Icon", router: "Icon", value: "图标" },
+        { name: "Sticky", router: "Sticky", value: "粘贴定位" },
         { name: "mlLazy", router: "mlLazy", value: "图片懒加载" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
+        { name: "Loading", router: "Loadings", value: "加载" },
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Button", router: "Button", value: "按钮" },
         { name: "Button", router: "Button", value: "按钮" },

@@ -1,28 +1,40 @@
-import button from '../packages/button'
-import cell from '../packages/cell'
-import swipe from '../packages/swipe'
-import swipeItem from '../packages/swipe/src/swipeItem'
+import 'font-awesome/css/font-awesome.css'
+import Button from '../packages/Button'
+import Cell from '../packages/Cell'
+import Swipe from '../packages/Swipe'
+import SwipeItem from '../packages/Swipe/src/SwipeItem'
+import Icon from '../packages/Icon'
+import Sticky from '../packages/Sticky'
+import NavBar from '../packages/NavBar'
+import Loadings from '../packages/Loadings'
 // 请提示  不需要注册组建
-import mlAlert from '../packages/ml-alert'
+import mlAlert from '../packages/mlAlert'
 import mlToast from '../packages/toast'
 import InfiniteScroll from '../packages/InfiniteScroll'
 import mlLazy from '../packages/mlLazy'
-import './assets/iconfont.css'
 const install = function (Vue, cog = {}) {
-  Vue.component(button.name, button)
-  Vue.component(cell.name, cell)
-  Vue.component(swipe.name, swipe)
-  Vue.component(swipeItem.name, swipeItem)
+  Vue.component(Button.name, Button)
+  Vue.component(Cell.name, Cell)
+  Vue.component(Swipe.name, Swipe)
+  Vue.component(SwipeItem.name, SwipeItem)
+  Vue.component(Icon.name, Icon)
+  Vue.component(Sticky.name, Sticky)
+  Vue.component(NavBar.name, NavBar)
+  Vue.component(Loadings.name, Loadings)
 }
 export {
   install,
-  button,
-  cell,
+  Button,
+  Cell,
   mlAlert,
   mlToast,
-  swipe,
+  Swipe,
   mlLazy,
-  InfiniteScroll
+  InfiniteScroll,
+  Icon,
+  Sticky,
+  NavBar,
+  Loadings
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)

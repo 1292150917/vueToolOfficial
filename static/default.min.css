@@ -1,7 +1,9 @@
-.hljs {
+.hljs,
+.language-javascript {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
+  line-height: 20px;
   background: #f1f4f8
 }
 
@@ -9,6 +11,111 @@
 .hljs-subst {
   color: #444;
   line-height: 20px;
+}
+
+.hljs-attr {
+  color: #b58900;
+}
+
+td code {
+  background: #ececec;
+  padding: 4px 8px;
+  color: #666;
+  border-radius: 4px;
+}
+
+pre {
+  overflow: auto;
+}
+
+thead {
+  background: #f1f4f8;
+  text-align: left;
+}
+
+th {
+  font-weight: 300;
+}
+
+td {
+  font-size: 13px;
+}
+
+.mar30 {
+  margin-top: 30px;
+}
+
+.mar20 {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.name {
+  margin-bottom: 30px;
+}
+
+tr {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.main p {
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: #34495e;
+}
+
+th {
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 22px;
+  margin-top: 45px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.language-html {
+  background: #f1f4f8;
+  display: block;
+  line-height: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  line-height: 1.5em;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  color: #333;
 }
 
 .hljs-comment {
