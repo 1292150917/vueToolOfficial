@@ -8,7 +8,7 @@
             <span :style="styleValue">{{value}}</span>
         </div>
      </div>
-     <div class="ml-cell-label"><slot>{{label}}</slot></div>
+     <div class="ml-cell-label" v-if="label"><slot>{{label}}</slot></div>
     </div>
 </template>
 
@@ -81,8 +81,8 @@
     }
     .ml-cell-label{
         font-size: 12px;
-        color: #999;
-        margin-top: 4px;    margin-left: 3%;
-    margin-right: 3%;
+        color: #999; margin-left: 3%;
+    margin-right: 3%;padding-bottom: 9px;
+    padding-top: 9px;
     }
 </style>

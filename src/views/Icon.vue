@@ -22,7 +22,7 @@
         data() {
             return {
                 indexs: 20,
-                obj:['check','frown-o','check-circle','calendar','exclamation','exclamation-circle','close','commenting-o','comments','dot-circle-o','clock-o','flash','frown-o','handshake-o','plane','plug','hand-pointer-o','hand-rock-o','wifi','users','wheelchair','vcard-o','star-o','sort-desc','sort-up','search-minus','plus-circle','plus-square','history','recycle','star','star-half-o','thumbs-up','thumbs-down','user-o','unlock-alt','user-circle','unsorted','user-times','video-camera','volume-up','search-plus','transgender','genderless','neuter','mars','mercury','venus','mars','mars-stroke-v','file','file-excel-o','file-text-o','file-audio-o','file-o','spinner','cog','refresh','check-square-o','plus-square-o','square','square-o','minus-square-o','check-square-o','check-square','angle-down','angle-left','angle-double-left','angle-double-down','angle-up','angle-right','chevron-down','chevron-left','chevron-right','chevron-up','arrows-alt','heart-o']
+                obj:['check','success','frown-o','check-circle','calendar','exclamation','exclamation-circle','close','commenting-o','comments','dot-circle-o','clock-o','flash','frown-o','handshake-o','plane','plug','hand-pointer-o','hand-rock-o','wifi','users','wheelchair','vcard-o','star-o','sort-desc','sort-up','search-minus','plus-circle','plus-square','history','recycle','star','star-half-o','thumbs-up','thumbs-down','user-o','unlock-alt','user-circle','unsorted','user-times','video-camera','volume-up','search-plus','transgender','genderless','neuter','mars','mercury','venus','mars','mars-stroke-v','file','file-excel-o','file-text-o','file-audio-o','file-o','spinner','cog','refresh','check-square-o','plus-square-o','square','square-o','minus-square-o','check-square-o','check-square','angle-down','angle-left','angle-double-left','angle-double-down','angle-up','angle-right','chevron-down','chevron-left','chevron-right','chevron-up','arrows-alt','heart-o']
             };
         },
         methods: {
@@ -38,7 +38,7 @@
 <style scoped>
 div{
     margin-right: 9px;
-    margin-top: 14px;
+    margin-top: 14px;text-align: center;
 }
 div span{
 

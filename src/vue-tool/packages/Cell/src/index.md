@@ -16,10 +16,10 @@ Vue.use(Cell);
 <ml-cell title="标题" seat="left" label="描述信息" value="这是内容"></ml-cell>
 ```
 
-#### 幽灵按钮
+#### 高级用法
 
 ```html
-<ml-button size="large" class="button" :plain="true" type="primary">幽灵按钮</ml-button>
+重构中
 ```
 ### API 
 

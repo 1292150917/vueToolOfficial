@@ -3,7 +3,7 @@
     <p class="title">基础用法</p>
 		<button @click="tankuang1 = true">弹出框</button>
     <p class="title">弹出位置</p>
-		<ml-popup v-model="tankuang1" position="center"><div class="div1">弹框</div></ml-popup>
+		<ml-popup v-model="tankuang1" position="center"><div><ml-loading icon="ripple"></ml-loading></div></ml-popup>
     <button @click="tankuang2 = true">上面弹框</button>
     <ml-popup v-model="tankuang2" position="top"><div class="div1">弹框</div></ml-popup>
     <button @click="tankuang3 = true">下面弹框</button>
