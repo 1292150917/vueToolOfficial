@@ -104,6 +104,24 @@ var router = [{
     meta: {
       name: "Loading 加载"
     }
+  },
+  {
+    path: '/Switch',
+    name: 'Switch',
+    component: r => require.ensure([], () => r(domeUrl('Switch')), 'Switch'),
+    dome: r => require.ensure([], () => r(compooentUrl('Switch')), 'Switch'),
+    meta: {
+      name: "Switch 开关"
+    }
+  },
+  {
+    path: '/Popup',
+    name: 'Popup',
+    component: r => require.ensure([], () => r(domeUrl('Popup')), 'Popup'),
+    dome: r => require.ensure([], () => r(compooentUrl('Popup')), 'Popup'),
+    meta: {
+      name: "Popup 弹出层"
+    }
   }
 ]
 export default router

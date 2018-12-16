@@ -26,8 +26,6 @@
  * @param {string} [left-text=''] - 左侧文案
  * @param {string} [right-text=''] -  右侧文案
  * @param {Boolean} [left-arrow=false] - 是否显示左侧箭头
- * @param {string} [cancelButtonText=取消] - 取消按钮内容
- * @param {string} [confirmButtonText=确认] - 确认按钮内容
  * @example
  * <nav-bar title="标题"><div slot="left">左侧内容</div></nav-bar>
  * @Slot
@@ -68,7 +66,7 @@
     }
   }
 </script>
-<style type="text/css">
+<style type="text/css" scoped>
   .nav-bar{
     height: 45px;
     line-height: 45px;
@@ -97,6 +95,7 @@
     width: 100%;
     text-align: center;  
     font-size: 15px;
+    border-bottom: 1px solid #f2f2f2;
     font-weight: 500;
   }
   .nav-bar-right{
@@ -105,6 +104,8 @@
     color: #1989fa;
     right: 15px;
     cursor:pointer;
-    font-size: 13px;
+    font-size: 13px;    display: flex;
+    align-items: center;
+    height: 100%;
   }
 </style>

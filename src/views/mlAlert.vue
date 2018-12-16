@@ -1,7 +1,11 @@
 <template>
-    <div>
-        <ml-button @click="go()">带取消按钮点击</ml-button>
-        <ml-button :plain="true" @click="go1()">自定义内容</ml-button>
+    <div style="margin-left: 16px;">
+      <p class="title">消息提示</p>
+      <button @click="go">消息提示</button>
+      <button @click="go1">无标题提示</button>
+      <p class="title">自定义按钮内容</p>
+      <button @click="go2">更改取消/确认</button>
+      <button @click="go3">删除取消</button>
     </div>
 </template>
 <script>
@@ -19,10 +23,32 @@ export default {
     },
     go1() {
       mlAlert({
-        title: "提示",
         content: "点个赞吧",
-        cancelButtonText: "No",
-        confirmButtonText: "Yes"
+        success: function(){
+        
+        }
+      });
+    },
+    go3(){
+      mlAlert({
+        title:"提示",
+        content: "点个赞吧",
+        confirmButtonText:"yes",
+        showCancelButton:false,
+        success: function(){
+        
+        }
+      });
+    },
+    go2(){
+      mlAlert({
+        title:"提示",
+        content: "点个赞吧",
+        cancelButtonText:"no",
+        confirmButtonText:"yes",
+        success: function(){
+        
+        }
       });
     }
   },
@@ -30,5 +56,17 @@ export default {
   mounted: function() {}
 };
 </script>
-<style>
+<style scoped>
+.title{
+    font-size: 14px;
+    color: #999;
+    margin-top: 14px;
+    margin-bottom: 13px;
+}
+button{
+      border: 1px solid #3d7bd4;
+    color: #3d7bd4;
+    padding: 7px 14px 7px 14px;
+    background: white;
+}
 </style>

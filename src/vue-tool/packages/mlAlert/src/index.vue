@@ -1,5 +1,5 @@
 <template>
-    <div class="ml-alert">
+          <div class="ml-alert">
         <div class="ml-alert-main">
             <div class="ml-alert-title">{{title}}</div>
             <div class="ml-alert-content">{{content}}</div>
@@ -17,7 +17,7 @@
  * @module components/button
  * @desc 按钮
  * @param {string} [title=xxx] - title名字
- * @param {boolean} [content=xxx] - 内容
+ * @param {string} [content=xxx] - 内容
  * @param {boolean} [showCancelButton=true] - 是否显示取消按钮
  * @param {boolean} [showConfirmButton=true] - 是否显示确认按钮
  * @param {string} [cancelButtonText=取消] - 取消按钮内容

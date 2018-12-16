@@ -32,23 +32,19 @@ export default {
       compon: "",
       iframeSrc: "index2.html#/Button",
       navMessage: [
-        { name: "Button", router: "Button", value: "按钮" },
+        { name: "Icon", router: "Icon", value: "图标" },
         { name: "Cell", router: "Cell", value: "单元格" },
-        { name: "mlAlert", router: "mlAlert", value: "弹框" },
-        { name: "Swipe", router: "Swipe", value: "轮播" },
         { name: "Toast", router: "Toast", value: "轻提示" },
         { name: "List", router: "List", value: "瀑布流滚动" },
         { name: "NavBar", router: "NavBar", value: "导航栏" },
-        { name: "Icon", router: "Icon", value: "图标" },
+        { name: "Button", router: "Button", value: "按钮" },
+        { name: "Popup", router: "Popup", value: "弹出层" },
+        { name: "Swipe", router: "Swipe", value: "轮播" },
         { name: "Sticky", router: "Sticky", value: "粘贴定位" },
+        { name: "Switch", router: "Switch", value: "开关" },
         { name: "mlLazy", router: "mlLazy", value: "图片懒加载" },
+        { name: "mlAlert", router: "mlAlert", value: "弹框" },
         { name: "Loading", router: "Loadings", value: "加载" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Button", router: "Button", value: "按钮1" }
       ]
     };
   },
@@ -60,7 +56,9 @@ export default {
     }
   },
   components: {},
-  created: function() {}
+  created: function() {
+    this.iframeSrc = `index2.html` + location.hash
+  }
 };
 </script>
 <style scoped>
@@ -96,7 +94,9 @@ h3 {
 .left {
   height: 100%;
 }
-
+.left{
+  height:91%;
+}
 .left p {
   font-weight: 800;
   color: #333;

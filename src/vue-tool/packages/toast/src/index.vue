@@ -49,7 +49,6 @@
         position: fixed;
         font-size: 12px;
         border-radius: 5px;
-        text-align: center;
         left: 50%;
         -webkit-transform: translate3d(-50%, -50%, 0);
         transform: translate3d(-50%, -50%, 0);

@@ -15,7 +15,7 @@
  * @param {boolean} [disabled=false] - 禁用
  * @param {boolean} [plain=false] - 幽灵按钮
  * @example
- * <mt-button size="large" icon="back" type="primary">按钮</mt-button>
+ * <ml-button size="large" icon="back" type="primary">按钮</ml-button>
  */
 export default {
   name: "ml-button",

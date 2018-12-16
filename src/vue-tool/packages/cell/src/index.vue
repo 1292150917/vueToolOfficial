@@ -1,12 +1,14 @@
 <template>
-    <div class="ml-cell" @click="handleClick" :style="`height:${height};line-height:${height};font-size:${size}`">
+    <div class="cell">
+      <div class="ml-cell" @click="handleClick" :style="`height:${height};line-height:${height};font-size:${size}`">
         <span :style="`float:${seat};${styleIcon}`" 
         :class="icon ? icon + ' iconfont' : ''"></span>
         <span :style="styleTitle">{{title}}</span>
         <div class="ml-cell-right">
             <span :style="styleValue">{{value}}</span>
         </div>
-        <div class="ml-cell-label"><slot></slot></div>
+     </div>
+     <div class="ml-cell-label"><slot>{{label}}</slot></div>
     </div>
 </template>
 
@@ -18,7 +20,7 @@
      * @param {string} [title=名字] - 名字/标题
      * @param {string} [value=内容] - 后缀显示内容
      * @param {string} [icon=icon-arrowright] - class名字 图片显示class（案例图标库）
-     * @param {string} [height=100px] - 元素的高度
+     * @param {string} [height=45px] - 元素的高度
      * @param {string} [sise=12px] - 元素的字体大小
      * @param {string} [seat=right] - 图标位置 支持left right
      * @param {string} [label=描述字体] - 描述文字
@@ -42,7 +44,7 @@
             styleValue:String,
             styleTitle:String,
             height: {
-                default: 'auto',
+                default: '38px',
                 type: String
             },
             size: {
@@ -53,25 +55,34 @@
                 default:"right",
                 type :String
             },
+        },
+        mounted(){
         }
     };
 </script>
 <style scoped>
+.cell{
+    background: #fff;
+    width: 100%;
+}
     .ml-cell {
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        border: 1px solid #eee;
+        margin-left: 3%;
+        margin-right: 3%;
+        border-bottom: 1px solid #faf6f6;
         overflow: hidden;
         text-align: left;
+        background: #fff;
+        line-height: 38px;
+        border-top: 0;
     }
     .ml-cell-right {
         float: right;
-        color: #888;
+        color: #333;
     }
     .ml-cell-label{
         font-size: 12px;
         color: #999;
+        margin-top: 4px;    margin-left: 3%;
+    margin-right: 3%;
     }
 </style>

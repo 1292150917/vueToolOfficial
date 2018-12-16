@@ -7,6 +7,8 @@ import Icon from '../packages/Icon'
 import Sticky from '../packages/Sticky'
 import NavBar from '../packages/NavBar'
 import Loadings from '../packages/Loadings'
+import Popup from '../packages/Popup'
+import Switch from '../packages/Switch'
 // 请提示  不需要注册组建
 import mlAlert from '../packages/mlAlert'
 import mlToast from '../packages/toast'
@@ -21,6 +23,8 @@ const install = function (Vue, cog = {}) {
   Vue.component(Sticky.name, Sticky)
   Vue.component(NavBar.name, NavBar)
   Vue.component(Loadings.name, Loadings)
+  Vue.component(Switch.name, Switch)
+  Vue.component(Popup.name, Popup)
 }
 export {
   install,
@@ -34,7 +38,9 @@ export {
   Icon,
   Sticky,
   NavBar,
-  Loadings
+  Loadings,
+  Switch,
+  Popup
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
