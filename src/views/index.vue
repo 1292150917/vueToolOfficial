@@ -4,7 +4,7 @@
     <div class="left">
       <ul>
         <p class="zhinan">开发指南</p>
-        <p class="list" @click="$router.push({path:'brief'})">介绍</p>
+        <p class="list" @click="$router.push({path:'brief'})">快速上手</p>
         <p class="title-left">组建</p>
         <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in navMessage">
           {{item.name}}
