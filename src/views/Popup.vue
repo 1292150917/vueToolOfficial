@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<button @click="tankuang1 = true">中间弹框</button>
+    <p class="title">基础用法</p>
+		<button @click="tankuang1 = true">弹出框</button>
+    <p class="title">弹出位置</p>
 		<ml-popup v-model="tankuang1" position="center"><div class="div1">弹框</div></ml-popup>
     <button @click="tankuang2 = true">上面弹框</button>
     <ml-popup v-model="tankuang2" position="top"><div class="div1">弹框</div></ml-popup>
@@ -27,9 +29,23 @@
     }
   }
 </script>
-<style>
+<style type="text/css" scoped>
   .div1{
     padding: 20px;
     background: #fff;
   }
+.title{
+    font-size: 14px;
+    color: #999;
+    margin-top: 14px;
+    text-indent: 10px;
+    margin-bottom: 13px;
+}
+button{    
+  background: #fff;
+    padding: 7px 12px 7px 12px;
+    margin-left: 10px;
+    color: #333;
+    border: 1px solid #eee;
+}
 </style>

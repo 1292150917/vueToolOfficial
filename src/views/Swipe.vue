@@ -1,6 +1,53 @@
 <template>
     <div>
+      <p class="title">基本用法</p>
         <ml-swipe class="swipe" :touchable="true">
+            <ml-swipe-item>
+                <div class="s">
+                    1
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div  class="ss">
+                    2
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div class="sss">
+                    3
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div class="ssss">
+                    4
+                </div>
+            </ml-swipe-item>
+        </ml-swipe>
+        <p class="title">禁止手势滑动</p>
+        <ml-swipe class="swipe" :indicators="false" :touchable="false">
+            <ml-swipe-item>
+                <div class="s">
+                    1
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div  class="ss">
+                    2
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div class="sss">
+                    3
+                </div>
+            </ml-swipe-item>
+            <ml-swipe-item>
+                <div class="ssss">
+                    4
+                </div>
+            </ml-swipe-item>
+        </ml-swipe>
+        <p class="title">自定义滑动时间</p>
+        <ml-swipe class="swipe" :autoplay="1000" :touchable="false">
             <ml-swipe-item>
                 <div class="s">
                     1
@@ -36,7 +83,14 @@ export default {
   mounted: function() {}
 };
 </script>
-<style>
+<style scoped>
+.title{
+font-size: 14px;
+    color: #999;
+    margin-top: 14px;
+    margin-bottom: 13px;
+    text-indent: 10px;
+}
 .swipe{
     cursor:pointer;
 }

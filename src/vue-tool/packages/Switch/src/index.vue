@@ -28,7 +28,7 @@ export default {
     Switch(){
       return [
       'Switch',{
-        'Switch-false' : this.SwitchType
+        'Switch-false' : !this.SwitchType
         }
       ]
     },
@@ -67,13 +67,13 @@ export default {
   background: #fff;
   position: relative;
   top: -1px;
-  left: -1px;
+  left: 0px;
   background: #fff;
   transition: transform 0.35s;
+  box-sizing: border-box;;
+  border: 1px solid #eee;
 }
 .Switch-rou-true{
   transform:translate(32px,0px);
-  box-sizing: border-box;;
-  border: 1px solid #eee;
 }
 </style>

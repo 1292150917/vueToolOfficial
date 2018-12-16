@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
       <div ref="popupref" class="popup" v-if="checked" @click="checkedClick()">
-  		<div :class="popupClass">
+  		<div :class="popupClass" @click.stop="stop">
   			<slot></slot>
   		</div>
   	</div>
@@ -42,6 +42,9 @@
     	}
     },
     methods: {
+      stop(){
+
+      },
     	checkedClick(){
     		 this.$emit('change', !this.checked);
     	}

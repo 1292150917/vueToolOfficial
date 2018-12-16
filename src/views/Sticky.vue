@@ -39,7 +39,11 @@
     }
 
     p {
-        height: 40px;
+           height: 40px;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    line-height: 40px;
     }
     img{
         width: 40%;

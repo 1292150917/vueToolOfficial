@@ -2,6 +2,13 @@
 
 常用来实现吸顶效果，如果浏览器支持sticky定位，则使用原生的，否则会模拟实现，但可能与原生有些许差别
 
+### 使用指南
+
+```javascript
+  import { Sticky } from 'vant';
+
+  Vue.use(sticky);
+```
 ### 代码演示
 
 

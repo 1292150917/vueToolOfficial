@@ -6,7 +6,7 @@ import SwipeItem from '../packages/Swipe/src/SwipeItem'
 import Icon from '../packages/Icon'
 import Sticky from '../packages/Sticky'
 import NavBar from '../packages/NavBar'
-import Loadings from '../packages/Loadings'
+import Loading from '../packages/Loadings'
 import Popup from '../packages/Popup'
 import Switch from '../packages/Switch'
 // 请提示  不需要注册组建
@@ -22,7 +22,7 @@ const install = function (Vue, cog = {}) {
   Vue.component(Icon.name, Icon)
   Vue.component(Sticky.name, Sticky)
   Vue.component(NavBar.name, NavBar)
-  Vue.component(Loadings.name, Loadings)
+  Vue.component(Loading.name, Loading)
   Vue.component(Switch.name, Switch)
   Vue.component(Popup.name, Popup)
 }
@@ -38,7 +38,7 @@ export {
   Icon,
   Sticky,
   NavBar,
-  Loadings,
+  Loading,
   Switch,
   Popup
 }

@@ -47,7 +47,7 @@ export default {
   mounted: function() {}
 };
 </script>
-<style>
+<style scoped>
 img {
   width: 100%;
   height: 200px;

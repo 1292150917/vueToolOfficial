@@ -18,7 +18,7 @@
  * @param {string} [position=left] - 轮播位置 支持left/right
  * @param {boolean} [touchable=true] - 是否可以通过手势滑动
  * @param {boolean} [indicators=true] - 是否显示底部.... 指示器
- * @param {string} [autoplay=3000] - 自动轮播时间
+ * @param {Number} [autoplay=3000] - 自动轮播时间
  * @param {number} [duration=500] - 动画时间
  * @param {number} [autochange=0] - 自动滑动的位置，返回的索引
  * @example
