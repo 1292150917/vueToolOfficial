@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { Popup } from 'vant';
+  import { Popup } from 'vue-tool';
 ```
 ### 代码演示
 

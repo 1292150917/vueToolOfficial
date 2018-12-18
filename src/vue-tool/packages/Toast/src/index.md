@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { mlToast } from 'vant';
+  import { mlToast } from 'vue-tool';
 ```
 
 #### 简单用法

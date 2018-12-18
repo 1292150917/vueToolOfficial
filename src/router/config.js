@@ -122,6 +122,34 @@ var router = [{
     meta: {
       name: "Popup 弹出层"
     }
-  }
+  },
+  {
+    path: '/Regular',
+    name: 'Regular',
+    component: r => require.ensure([], () => r(domeUrl('Regular')), 'Regular'),
+    dome: r => require.ensure([], () => r(compooentUrl('Regular')), 'Regular'),
+    meta: {
+      name: "Regular 正则"
+    }
+  },
+  {
+    path: '/Picture',
+    name: 'Picture',
+    component: r => require.ensure([], () => r(domeUrl('Picture')), 'Picture'),
+    dome: r => require.ensure([], () => r(compooentUrl('Picture')), 'Picture'),
+    meta: {
+      name: "Picture 图片"
+    }
+  },
+  {
+    path: '/Cache',
+    name: 'Cache',
+    component: r => require.ensure([], () => r(domeUrl('Cache')), 'Cache'),
+    dome: r => require.ensure([], () => r(compooentUrl('Cache')), 'Cache'),
+    meta: {
+      name: "Cache 缓存操作"
+    }
+  },
+  
 ]
 export default router

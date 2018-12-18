@@ -14,6 +14,8 @@ import mlAlert from '../packages/mlAlert'
 import mlToast from '../packages/toast'
 import InfiniteScroll from '../packages/InfiniteScroll'
 import mlLazy from '../packages/mlLazy'
+import Regular from '../packages/Regular'
+import Picture from '../packages/Picture'
 const install = function (Vue, cog = {}) {
   Vue.component(Button.name, Button)
   Vue.component(Cell.name, Cell)
@@ -40,7 +42,9 @@ export {
   NavBar,
   Loading,
   Switch,
-  Popup
+  Popup,
+  Regular,
+  Picture
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)

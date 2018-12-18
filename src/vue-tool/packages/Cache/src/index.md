@@ -1,12 +1,13 @@
-## Cell 单元格
+## Cache 数据缓存
 
 ### 使用指南
 
 ```javascript
-import { Cell } from 'vue-tool';
-
-Vue.use(Cell);
+import { Cache } from 'vue-tool';
 ```
+
+> 此文档对`localStorage`,`sessionStorage`,`cookie`的处理，可以直接对缓存`存储和读取` `JSON` 格式
+
 ### 代码演示
 
 #### 基础用法

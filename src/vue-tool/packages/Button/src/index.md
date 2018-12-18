@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-import { Button } from 'vant';
+import { Button } from 'vue-tool';
 
 Vue.use(Button);
 ```

@@ -6,6 +6,9 @@
         <p class="zhinan">开发指南</p>
         <p class="list" @click="$router.push({path:'brief'})">快速上手</p>
         <p class="title-left">方法</p>
+        <li v-for="(item,index) in way" :key="index + 100" @click="routerClick(item.router)">
+          <span>{{item.name}}</span>
+        </li>
         <p class="title-left">组建</p>
         <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in navMessage">
           {{item.name}}
@@ -31,7 +34,12 @@ export default {
   data() {
     return {
       compon: "",
-      iframeSrc: "index2.html#/Button",
+      iframeSrc: "index2.html#/brief",
+      way: [
+        { name: "正则方法", router: "Regular", value: "正则方法" },
+        { name: "图片处理", router: "Picture", value: "图片处理" },
+        { name: "数据缓存", router: "Cache", value: "数据缓存" }
+      ],
       navMessage: [
         { name: "Icon", router: "Icon", value: "图标" },
         { name: "Cell", router: "Cell", value: "单元格" },
@@ -45,7 +53,7 @@ export default {
         { name: "Switch", router: "Switch", value: "开关" },
         { name: "mlLazy", router: "mlLazy", value: "图片懒加载" },
         { name: "mlAlert", router: "mlAlert", value: "弹框" },
-        { name: "Loading", router: "Loadings", value: "加载" },
+        { name: "Loading", router: "Loadings", value: "加载" }
       ]
     };
   },
@@ -58,7 +66,7 @@ export default {
   },
   components: {},
   created: function() {
-    this.iframeSrc = `index2.html` + location.hash
+    this.iframeSrc = `index2.html` + location.hash;
   }
 };
 </script>
@@ -95,8 +103,8 @@ h3 {
 .left {
   height: 100%;
 }
-.left{
-  height:91%;
+.left {
+  height: 91%;
 }
 .left p {
   font-weight: 800;

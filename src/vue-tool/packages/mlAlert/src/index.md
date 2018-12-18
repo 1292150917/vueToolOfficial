@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { mlAlert } from 'vant';
+  import { mlAlert } from 'vue-tool';
 ```
 ### 代码演示
 

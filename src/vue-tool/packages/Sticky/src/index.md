@@ -5,7 +5,7 @@
 ### 使用指南
 
 ```javascript
-  import { Sticky } from 'vant';
+  import { Sticky } from 'vue-tool';
 
   Vue.use(sticky);
 ```

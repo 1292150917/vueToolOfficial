@@ -3,7 +3,7 @@
 ### 代码演示
 
 ```javascript
-  import { Swipe } from 'vant';
+  import { Swipe } from 'vue-tool';
   
   Vue.use(Swipe)
 ```

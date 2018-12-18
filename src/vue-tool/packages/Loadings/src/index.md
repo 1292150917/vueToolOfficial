@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { Loading } from 'vant';
+  import { Loading } from 'vue-tool';
   Vue.use(Loading)
 ```
 >部分图标资源均来自网络/第三方/网友分享，图标均为SVG,CSS,如果侵权请联系删除！

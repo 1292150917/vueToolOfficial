@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { Icon } from 'vant';
+  import { Icon } from 'vue-tool';
   Vue.use(Icon)
 ```
 >图标资源来自于[Font Awesome 4.7.0](http://fontawesome.dashgame.com/)兼容官方写法，如果你只是想简单使用某个图标，可以使用这里提供的Icon组件，也许能省下一些你写类名的时间

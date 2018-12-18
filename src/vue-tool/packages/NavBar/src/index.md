@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { NavBar } from 'vant';
+  import { NavBar } from 'vue-tool';
 ```
 ### 代码演示
 

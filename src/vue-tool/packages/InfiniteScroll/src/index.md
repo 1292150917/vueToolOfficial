@@ -3,7 +3,7 @@
 ### 使用指南
 
 ```javascript
-  import { InfiniteScroll } from 'vant';
+  import { InfiniteScroll } from 'vue-tool';
 ```
 ### 代码演示
 
