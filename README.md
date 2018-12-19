@@ -1,5 +1,5 @@
 <p align=center>
-	<img src="static/favicon.png" href="https://1292150917.github.io/vueToolOfficial/dist/index.html" />
+    <a href="https://1292150917.github.io/vueToolOfficial/dist/index.html"><img src="static/favicon.png"/></a>
 </p>
 <p align=center>
 	<b size=5 color=#7FFFD4 face="微软雅黑" align=center>
