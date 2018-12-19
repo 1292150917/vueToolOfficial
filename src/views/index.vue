@@ -1,8 +1,9 @@
 <template>
   <div class="index">
     <div class="nav">
-      <img src="static/favicon.png" alt>
-      <span>vueTool</span>
+      <img @click="$router.push({path:'brief'})" src="static/favicon.png" alt>
+      <span @click="$router.push({path:'brief'})">vueTool</span>
+      <img src="static/fluidicon.png" @click="fluidicon" class="fluidicon" alt>
     </div>
     <div class="left">
       <ul>
@@ -12,7 +13,7 @@
         <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in way">
           <span>{{item.value}}</span>
         </li>
-        <div class="mari" v-for="(items,key,index) in message">
+        <div class="mari" v-for="(items,key,index) in message" :key="index">
           <p class="title-left">{{key}}</p>
           <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in message[key]">
             {{item.name}}
@@ -72,6 +73,9 @@ export default {
       this.$router.push({ name: rou });
       this.compon = rou;
       this.iframeSrc = `index2.html#/${rou}`;
+    },
+    fluidicon() {
+      window.open("https://github.com/1292150917/vueToolOfficial");
     }
   },
   components: {},
@@ -134,6 +138,7 @@ h3 {
   margin: 0 auto;
   position: relative;
   left: -100px;
+  margin-top: 96px;
 }
 
 .left {
@@ -172,10 +177,17 @@ h3 {
   z-index: 10;
   top: 0;
 }
+.nav .fluidicon {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  top: 7px;
+}
 .nav img {
   width: 38px;
   position: relative;
   top: 5px;
+  cursor: pointer;
 }
 .nav span {
   margin-left: 5px;
@@ -183,6 +195,7 @@ h3 {
   position: relative;
   top: -3px;
   left: 3px;
+  cursor: pointer;
 }
 ul li {
   list-style: none;
