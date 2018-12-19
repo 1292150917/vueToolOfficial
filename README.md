@@ -1,5 +1,5 @@
 <p align=center>
-	<img src="src/static/favicon.png" />
+	<img src="static/favicon.png" />
 </p>
 <p align=center>
 	<b size=5 color=#7FFFD4 face="微软雅黑" align=center>
