@@ -3,7 +3,8 @@
     <div class="nav">
       <img @click="$router.push({path:'brief'})" src="static/favicon.png" alt>
       <span @click="$router.push({path:'brief'})">vueTool</span>
-      <img src="static/fluidicon.png" @click="fluidicon" class="fluidicon" alt>
+      <img src="static/fluidicon.png" @click="fluidicon('https://github.com/1292150917/vueToolOfficial')" class="fluidicon" alt>
+      <img src="static/c426a1116301d1fd178c51522484127a.png" @click="fluidicon('https://www.npmjs.com/package/vue-tool')" class="npm" alt>
     </div>
     <div class="left">
       <ul>
@@ -74,8 +75,8 @@ export default {
       this.compon = rou;
       this.iframeSrc = `index2.html#/${rou}`;
     },
-    fluidicon() {
-      window.open("https://github.com/1292150917/vueToolOfficial");
+    fluidicon(url) {
+      window.open(url);
     }
   },
   components: {},
@@ -179,8 +180,15 @@ h3 {
 }
 .nav .fluidicon {
   position: absolute;
-  right: 5%;
+  right: 150px;
   cursor: pointer;
+  top: 7px;
+}
+.nav .npm{
+  position: absolute;
+  right: 100px;
+  cursor: pointer;
+  border-radius: 50%;
   top: 7px;
 }
 .nav img {
