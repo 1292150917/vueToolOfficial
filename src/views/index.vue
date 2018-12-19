@@ -1,17 +1,27 @@
 <template>
   <div class="index">
     <div class="nav">
-      <img @click="$router.push({path:'brief'})" src="static/favicon.png" alt>
-      <span @click="$router.push({path:'brief'})">vueTool</span>
-      <img src="static/fluidicon.png" @click="fluidicon('https://github.com/1292150917/vueToolOfficial')" class="fluidicon" alt>
-      <img src="static/c426a1116301d1fd178c51522484127a.png" @click="fluidicon('https://www.npmjs.com/package/vue-tool')" class="npm" alt>
+      <img @click="briefClick('brief')" src="static/favicon.png" alt>
+      <span @click="briefClick('brief')">vueTool</span>
+      <img
+        src="static/fluidicon.png"
+        @click="fluidicon('https://github.com/1292150917/vueToolOfficial')"
+        class="fluidicon"
+        alt
+      >
+      <img
+        src="static/c426a1116301d1fd178c51522484127a.png"
+        @click="fluidicon('https://www.npmjs.com/package/vue-tool')"
+        class="npm"
+        alt
+      >
     </div>
     <div class="left">
       <ul>
         <p class="zhinan">开发指南</p>
-        <p class="list" @click="$router.push({path:'brief'})">快速上手</p>
+        <p class="list" @click="briefClick('brief')">快速上手</p>
         <p class="title-left">方法</p>
-        <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in way">
+        <li @click="routerClick(item.router)" :key="index + 1000" v-for="(item,index) in way">
           <span>{{item.value}}</span>
         </li>
         <div class="mari" v-for="(items,key,index) in message" :key="index">
@@ -74,6 +84,10 @@ export default {
       this.$router.push({ name: rou });
       this.compon = rou;
       this.iframeSrc = `index2.html#/${rou}`;
+    },
+    briefClick(url) {
+      this.$router.push({ path: url });
+      this.iframeSrc = `index2.html#/${url}`;
     },
     fluidicon(url) {
       window.open(url);
@@ -184,7 +198,7 @@ h3 {
   cursor: pointer;
   top: 7px;
 }
-.nav .npm{
+.nav .npm {
   position: absolute;
   right: 100px;
   cursor: pointer;

@@ -8,6 +8,7 @@ function domeUrl(url) {
 var router = [{
     path: '/brief',
     name: 'brief',
+    component: r => require.ensure([], () => r(domeUrl('brief')), 'brief'),
     dome: r => require.ensure([], () => r(require('@/index.md')), 'Button'),
     meta: {
       name: "brief 简介"

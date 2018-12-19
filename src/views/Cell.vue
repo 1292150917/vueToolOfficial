@@ -2,7 +2,7 @@
     <div>
       <p class="title">基础用法</p>
       <ml-cell title="标题" value="这是内容"></ml-cell>
-      <ml-cell title="标题" seat="left" label="描述信息" value="这是内容"></ml-cell>
+      <ml-cell title="标题" seat="left" is-link label="描述信息" value="这是内容"></ml-cell>
       <p class="title">单元格大小</p>
       <ml-cell title="标题" value="这是内容" height="50px"></ml-cell> 
       <ml-cell title="标题" seat="left" label="描述信息" value="这是内容" height="50px"></ml-cell>

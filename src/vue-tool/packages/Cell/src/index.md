@@ -19,7 +19,7 @@ Vue.use(Cell);
 #### 高级用法
 
 ```html
-重构中
+<ml-cell title="标题" seat="left" is-link label="描述信息" value="这是内容"></ml-cell>
 ```
 ### API 
 
