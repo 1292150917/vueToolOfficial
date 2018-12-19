@@ -1,19 +1,24 @@
 <template>
   <div class="index">
-    <div class="nav"></div>
+    <div class="nav">
+      <img src="static/favicon.png" alt>
+      <span>vueTool</span>
+    </div>
     <div class="left">
       <ul>
         <p class="zhinan">开发指南</p>
         <p class="list" @click="$router.push({path:'brief'})">快速上手</p>
         <p class="title-left">方法</p>
-        <li v-for="(item,index) in way" :key="index + 100" @click="routerClick(item.router)">
-          <span>{{item.name}}</span>
-        </li>
-        <p class="title-left">组建</p>
-        <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in navMessage">
-          {{item.name}}
+        <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in way">
           <span>{{item.value}}</span>
         </li>
+        <div class="mari" v-for="(items,key,index) in message">
+          <p class="title-left">{{key}}</p>
+          <li @click="routerClick(item.router)" :key="index" v-for="(item,index) in message[key]">
+            {{item.name}}
+            <span>{{item.value}}</span>
+          </li>
+        </div>
       </ul>
     </div>
     <div class="main">
@@ -38,23 +43,28 @@ export default {
       way: [
         { name: "正则方法", router: "Regular", value: "正则方法" },
         { name: "图片处理", router: "Picture", value: "图片处理" },
-        { name: "数据缓存", router: "Cache", value: "数据缓存" }
+        { name: "数据缓存", router: "Cache", value: "数据缓存" },
+        { name: "模拟表单", router: "FormHttp", value: "模拟表单" }
       ],
-      navMessage: [
-        { name: "Icon", router: "Icon", value: "图标" },
-        { name: "Cell", router: "Cell", value: "单元格" },
-        { name: "Toast", router: "Toast", value: "轻提示" },
-        { name: "List", router: "List", value: "瀑布流滚动" },
-        { name: "NavBar", router: "NavBar", value: "导航栏" },
-        { name: "Button", router: "Button", value: "按钮" },
-        { name: "Popup", router: "Popup", value: "弹出层" },
-        { name: "Swipe", router: "Swipe", value: "轮播" },
-        { name: "Sticky", router: "Sticky", value: "粘贴定位" },
-        { name: "Switch", router: "Switch", value: "开关" },
-        { name: "mlLazy", router: "mlLazy", value: "图片懒加载" },
-        { name: "mlAlert", router: "mlAlert", value: "弹框" },
-        { name: "Loading", router: "Loadings", value: "加载" }
-      ]
+      message: {
+        基础组件: [
+          { name: "Icon", router: "Icon", value: "图标" },
+          { name: "Cell", router: "Cell", value: "单元格" },
+          { name: "List", router: "List", value: "瀑布流滚动" },
+          { name: "NavBar", router: "NavBar", value: "导航栏" },
+          { name: "Button", router: "Button", value: "按钮" },
+          { name: "Swipe", router: "Swipe", value: "轮播" },
+          { name: "Sticky", router: "Sticky", value: "粘贴定位" },
+          { name: "Switch", router: "Switch", value: "开关" },
+          { name: "mlLazy", router: "mlLazy", value: "图片懒加载" },
+          { name: "Loading", router: "Loadings", value: "加载" }
+        ],
+        反馈组建: [
+          { name: "mlAlert", router: "mlAlert", value: "弹框" },
+          { name: "Toast", router: "Toast", value: "轻提示" },
+          { name: "Popup", router: "Popup", value: "弹出层" }
+        ]
+      }
     };
   },
   methods: {
@@ -71,9 +81,14 @@ export default {
 };
 </script>
 <style scoped>
+.mari {
+  height: auto !important;
+}
 .title-left {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800 !important;
+  margin-top: 17px;
+  color: #666 !important;
 }
 .list {
   font-size: 14px;
@@ -150,9 +165,26 @@ h3 {
   height: 60px;
   line-height: 60px;
   border-bottom: 1px solid #eee;
+  padding-left: 3%;
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  top: 0;
 }
-
-ul > li {
+.nav img {
+  width: 38px;
+  position: relative;
+  top: 5px;
+}
+.nav span {
+  margin-left: 5px;
+  color: #333;
+  position: relative;
+  top: -3px;
+  left: 3px;
+}
+ul li {
   list-style: none;
   height: 40px;
   line-height: 40px;
@@ -160,7 +192,7 @@ ul > li {
   color: #333;
 }
 
-ul > li > span {
+ul li > span {
   color: #999;
   font-size: 12px;
 }
@@ -171,7 +203,7 @@ ul {
   text-indent: 9px;
 }
 
-ul > li:hover {
+ul li:hover {
   color: rgb(128, 158, 182);
 }
 </style>

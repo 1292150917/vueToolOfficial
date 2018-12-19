@@ -1,6 +1,16 @@
-# vue-tool (持续更新中)
-
-> A Vue.js project
+<p align=center>
+	<img src="src/static/favicon.png" />
+</p>
+<p align=center>
+	<b size=5 color=#7FFFD4 face="微软雅黑" align=center>
+		一套收集各式各样、偶尔维护的UI库, mintUi,Vant的设计
+	</b>
+</p>
+<p align=center>
+	<b size=5 color=#7FFFD4 face="微软雅黑" align=center>
+		**该组件暂未和NPM同步
+	</b>
+</p>
 
 **待完成版本-持续更新中！**
 **暂时的演示地址为：[超快传送！点击查看演示效果](https://1292150917.github.io/vueToolOfficial/dist/index.html)

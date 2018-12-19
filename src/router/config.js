@@ -150,6 +150,15 @@ var router = [{
       name: "Cache 缓存操作"
     }
   },
+  {
+    path: '/FormHttp',
+    name: 'FormHttp',
+    component: r => require.ensure([], () => r(domeUrl('FormHttp')), 'FormHttp'),
+    dome: r => require.ensure([], () => r(compooentUrl('FormHttp')), 'FormHttp'),
+    meta: {
+      name: "模拟表单提交"
+    }
+  },
   
 ]
 export default router
