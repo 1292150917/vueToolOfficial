@@ -9,7 +9,7 @@ var router = [{
     path: '/brief',
     name: 'brief',
     component: r => require.ensure([], () => r(domeUrl('brief')), 'brief'),
-    dome: r => require.ensure([], () => r(require('@/index.md')), 'Button'),
+    dome: r => require.ensure([], () => r(require('@/index.md')), 'brief'),
     meta: {
       name: "brief 简介"
     }

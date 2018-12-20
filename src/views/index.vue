@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="nav">
+    <div class="nav" v-if="!mobile">
       <img @click="briefClick('brief')" src="static/favicon.png" alt>
       <span @click="briefClick('brief')">vueTool</span>
       <img
@@ -16,7 +16,7 @@
         alt
       >
     </div>
-    <div class="left">
+    <div class="left" v-if="!mobile">
       <ul>
         <p class="zhinan">开发指南</p>
         <p class="list" @click="briefClick('brief')">快速上手</p>
@@ -33,10 +33,10 @@
         </div>
       </ul>
     </div>
-    <div class="main">
+    <div class="main" v-if="!mobile">
       <router-view></router-view>
     </div>
-    <div class="right">
+    <div class="right" :style="mobile ? 'top: 2%;left: 8%;' : ''">
       <img src="https://mint-ui.github.io/docs/static/img/phone.5909f66.png" alt>
       <div class="right-main">
         <iframe :src="iframeSrc" frameborder="0"></iframe>
@@ -46,11 +46,13 @@
 </template>
 
 <script>
+import mlAlert from "../vue-tool/packages/mlAlert";
 export default {
   name: "index",
   data() {
     return {
       compon: "",
+      mobile:false,
       iframeSrc: "index2.html#/brief",
       way: [
         { name: "正则方法", router: "Regular", value: "正则方法" },
@@ -96,6 +98,18 @@ export default {
   components: {},
   created: function() {
     this.iframeSrc = `index2.html` + location.hash;
+    if(document.body.offsetWidth < 400){
+      this.mobile = true
+      mlAlert({
+        title:"提示",
+        content: "建议采用PC端查看应用",
+        confirmButtonText:"确认",
+        showCancelButton:false,
+        success: function(){
+        
+        }
+      });
+    }
   }
 };
 </script>

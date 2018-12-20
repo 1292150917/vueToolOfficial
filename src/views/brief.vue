@@ -1,15 +1,18 @@
 <template>
-  <div>
-    <p class="ptex">清凉，可靠的vueImt库</p>
-    <div
-      class="liLink"
-      @click="messageUfclick(index)"
-      v-for="(item,key,index) in message"
-      :key="index"
-    >
-      <ml-cell :height="'47px'" :size="'16px'" :title="key" is-link></ml-cell>
-      <div :class="messageUf[index] ? 'liLinkHeight' : 'liLinks'">
-        <ml-cell :title="items.value" is-link v-for="(items,index) in message[key]" :key="index"></ml-cell>
+  <div style="padding-bottom: 24px;">
+    <img src="static/favicon.png">
+    <p class="ptex">vueTool，简洁，便利！</p>
+    <div class="liLink" v-for="(item,key,index) in message" :key="index">
+      <ml-cell @click="messageUfclick(index)" :height="'47px'" :size="'16px'" :title="key" is-link></ml-cell>
+      <div class="liLinks" :style="style(message[key],messageUf[index])">
+        <ml-cell
+          @click="router(items.router)"
+          ref="cell"
+          :title="items.value"
+          is-link
+          v-for="(items,index) in message[key]"
+          :key="index"
+        ></ml-cell>
       </div>
     </div>
   </div>
@@ -25,13 +28,24 @@ export default {
     };
   },
   methods: {
+    style(item, bller) {
+      return {
+        height: !bller ? "0px" : `${item.length * 39}px`
+      };
+    },
+    router(router) {
+      this.$router.push({ path: router });
+    },
     messageUfclick(index) {
-      this.messageUf[index] = !this.messageUf[index]
+      var msg = JSON.parse(JSON.stringify(this.messageUf));
+      msg[index] = !msg[index];
+      this.messageUf = msg;
     }
   },
   created() {
     var messageUf = [];
-    for (var i = 0; i < Object.keys(indexs.data().message).length; i++) {
+    var index = Object.keys(indexs.data().message).length;
+    for (var i = 0; i < index; i++) {
       messageUf.push(false);
     }
     this.messageUf = messageUf;
@@ -40,6 +54,13 @@ export default {
 };
 </script>
 <style scoped>
+img {
+  width: 37%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 29px;
+  margin-bottom: 24px;
+}
 .button {
   margin-top: 20px;
 }
@@ -51,11 +72,6 @@ export default {
 }
 .liLinks {
   height: 0px;
-  transition: height 0.6s;
-  background: white;
-}
-.liLinkHeight {
-  height: 300px;
   transition: height 0.6s;
   background: white;
 }

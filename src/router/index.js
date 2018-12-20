@@ -16,7 +16,7 @@ var router = new Router({
     path: '/',
     name: 'index',
     component: index,
-    redirect: "Button",
+    redirect: "brief",
     children: routerList
   }]
 })
