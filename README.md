@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 
+ * @Date: 2020-03-24 18:00:48
+ * @LastEditors: 
+ * @LastEditTime: 2020-03-24 18:03:39
+ -->
 <p align=center>
     <a href="https://1292150917.github.io/vueToolOfficial/dist/index.html#/brief"><img src="static/favicon.png"/></a>
 </p>
@@ -20,7 +28,21 @@
 
 > 就是想装B一下！ 嗯嗯 就这个
 
-**项目暂未和NPM同步：[超快传送！点击查看演示效果](https://1292150917.github.io/vueToolOfficial/dist/index.html#/brief)
+**NPM同步安装 vue-tool：[超快传送！点击查看演示效果](https://1292150917.github.io/vueToolOfficial/dist/index.html#/brief)
+
+可以用在vue其他项目中 安装命令 
+
+``` bash
+
+npm install vue-tool
+
+在main.js中 
+
+import vueTool from vueTool
+
+vue.use(vueTool)
+
+```
 
 ## Build Setup
 
