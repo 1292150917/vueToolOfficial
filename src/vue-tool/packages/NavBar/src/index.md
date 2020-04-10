@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 
+ * @Date: 2020-04-10 16:12:53
+ * @LastEditors: 
+ * @LastEditTime: 2020-04-10 16:16:28
+ -->
 ## mlAlert 导航栏
 
 ### 使用指南
@@ -9,7 +17,7 @@
 
 #### 基础用法
 
-注意:`left-arrow="true"`为显示左箭头！
+注意:`left-arrow="true"`为显示左箭头！！！
 ```html
 <nav-bar 
   left-text="左侧" 
